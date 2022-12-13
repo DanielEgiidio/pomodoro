@@ -8,6 +8,7 @@ import { ToastContainer } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 import "react-toastify/dist/ReactToastify.min.css";
+import { CyclesContextProvider } from "./contexts/CyclesContext";
 
 <ToastContainer
   position="top-center"
@@ -25,10 +26,12 @@ import "react-toastify/dist/ReactToastify.min.css";
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <BrowserRouter>
-        <Router />
-        <GlobalStyle />
-      </BrowserRouter>
+      <CyclesContextProvider>
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
+      </CyclesContextProvider>
+      <GlobalStyle />
       <ToastContainer />
     </ThemeProvider>
   );
