@@ -11,7 +11,6 @@ export const History = () => {
   return (
     <HistoryContainer>
       <h1>Meu Histórico</h1>
-      <pre>{JSON.stringify(cycles, null, 2)}</pre>
 
       <HistoryList>
         <table>
